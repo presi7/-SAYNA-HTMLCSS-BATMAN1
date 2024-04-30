@@ -7,29 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-hero">
-        <div class="logo">
-            <img src="Assets/Logos/logohome.png" alt="Logo accueil">
+    <div class="hero">
+        <div class="container-hero">
+            <div class="logo">
+                <img src="Assets/Logos/logohome.png" alt="Logo accueil">
+            </div>
+            <nav class="menu">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#">HOME</a></li>
-            </ul>
-        </nav>
+        <div class="hero-text">
+            <p>Au nom de ses parents assassinés, Bruce Wayne mène 
+                une guerre éternelle contre les criminels de Gotham City. 
+                Il est vengeur. Il est la nuit.</p>
+            <h3>Il est Batman</h3>
+        </div>
+        <div class="hero-btn">
+            <button>VOIR LE HEROS </button>
+            <button>LES ADVERSAIRES</button>
+        </div>
+        <div class="fleche-down">
+            <img src="Assets/Logos/flèche_down_header.png" alt="Fleche en bas">
+        </div>
     </div>
-    <div class="hero-text">
-        <p>Au nom de ses parents assassinés, Bruce Wayne mène 
-            une guerre éternelle contre les criminels de Gotham City. 
-            Il est vengeur. Il est la nuit.</p>
-        <h3>Il est Batman</h3>
-    </div>
-    <div class="hero-btn">
-        <button>VOIR LE HEROS </button>
-        <button>LES ADVERSAIRES</button>
-    </div>
-    <div class="fleche-down">
-        <img src="Assets/Logos/flèche_down_header.png" alt="Fleche en bas">
-    </div>
+    
     <div class="batman_au_cinema">
         <h1>BATMAN AU CINÉMA</h1>
         <p>Le personnage de Batman est un super héros de l’univers de DC Comics. Il a été créé par le 
@@ -66,6 +69,9 @@
             la Terre, ceux vers qui le monde entier se tourne lorsque les menaces extraterrestres ou 
             surnaturelles menacent son existence.</p>
     </div> 
+    <div class="bathome11">
+        <img src="Assets/Illustrations/Bathome11.png" alt="">
+    </div>
     <div class="multimedia">
         <h1>MULTIMÉDIA</h1>
         <div class="icone-fleche_1">
@@ -91,33 +97,38 @@
     <div class="bathome_ba2">
         <img src="Assets/Illustrations/Bathome_ba2.png" alt="Bathome_ba2">
     </div>
+   
     <div class="personne-contact">
-        <h1>PRENONS CONTACT</h1>
-        <form action="/submit_newsletter" method="post">
-            <label for="email">Adresse email :</label><br>
+        <div class="titre-form">
+            <h1>PRENONS CONTACT</h1>
+        </div>
+        <form action="/submit_newsletter" method="post" class="form-container">
+            
+            <label for="email">ADRESSE EMAIL</label><br>
             <input type="email" id="email" name="email" required><br><br>
         
-            <input type="checkbox" id="accept_news" name="accept_news">
-            <label for="accept_news">En cochant cette case, vous acceptez de recevoir l’actualité concernant les aventures de Batman.</label><br><br>
+            <label for="email">NEWSLETTER</label><br><br>
+            <label for="accept_news">En cochant cette case, vous acceptez de recevoir l’actualité concernant les aventures de Batman.</label>
+            <input type="checkbox" id="accept_news" name="accept_news"><br><br>
+
+            <input type="text" placeholder="Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter :"><img src="" alt=""><br><br>
         
-            <label for="frequency">Choisissez la fréquence à laquelle vous souhaitez recevoir votre newsletter :</label><br>
-            <select id="frequency" name="frequency">
-                <option value="daily">Quotidiennement</option>
-                <option value="weekly">Hebdomadairement</option>
-                <option value="monthly">Mensuellement</option>
-            </select><br><br>
+            <label for="receive_news">Souhaitez-vous recevoir des news ?</label><br><br>
+            <div class="news-btn">
+                <button>Des films</button>
+                <button>Des commics</button>
+                <button>De tout</button>
+            </div> <br><br>
         
-            <label for="receive_news">Souhaitez-vous recevoir des news ?</label><br>
-            <input type="radio" id="yes" name="receive_news" value="yes">
-            <label for="yes">Oui</label>
-            <input type="radio" id="no" name="receive_news" value="no">
-            <label for="no">Non</label><br><br>
+            <label for="comment">MESSAGE</label><br><br>
+            <!-- <textarea id="comment" name="comment"  cols="50" placeholder="Laissez un commentaire pour la communauté"></textarea><br><br> -->
+            <input type="text" id="message" name="message" placeholder="Laissez un commentaire pour la communauté" required><br><br>
         
-            <label for="comment">Message :</label><br>
-            <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br><br>
-        
-            <input type="submit" value="S'inscrire">
-        </form>                               
+            <input type="submit" value="CONFIRMER" >
+        </form>                              
     </div>
+    <footer>
+        <p>La seule façon raisonnable de vivre en ce bas monde, c'est en dehors des règles.</p>
+    </footer>
 </body>
 </html>
