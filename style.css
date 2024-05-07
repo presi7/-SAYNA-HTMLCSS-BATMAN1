@@ -8,6 +8,25 @@ html,body{
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 120px;
+    position: relative
+}
+.icons-rs {
+    position: absolute;
+    top: 51%;
+    right: 0;
+    padding-right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 70px;
+}
+.icons-rs img:hover {
+    filter: brightness(1.5) saturate(100%) hue-rotate(90deg);
+}
+.icon-img-rs{
+    margin-right: auto;
+    padding-top: 15px;
 }
 .container-hero {
     display: flex;
@@ -147,20 +166,49 @@ h1,p{
     width: 240px;
 }
 .multimedia{
-    display: flex;
-    /* align-items: center; */
+    /* display: flex;
+    align-items: center; 
+    max-width: 1140px;
+    margin: 0 auto; */
+}
+.multimedia h1{
     max-width: 1140px;
     margin: 0 auto;
+    padding: 0 150px;
+    margin-bottom: 50px;
 }
-.bathome_ba1,
-.carte {
+
+.bathome_ba1{
     /* flex: 1;  */
     /* padding: 20px; */
+    display: flex;
+    align-items: center; 
+    max-width: 1140px;
+    justify-content: center;
 }
-.icone-fleche_1,
-.icon_flèche_2 {
-    margin-right: 150px; 
+.carte{
+    height: 220px;
+    width: 48%;
+    background-color: #525659;
+    border-bottom-right-radius: 10px;
+    padding: 7px;
+   justify-content: center;
+   
 }
+.icon_fleche_1{
+    margin-right: 150px;
+    margin: 0 auto;
+}
+.icon_fleche_2 {
+    margin-left: 150px;
+    margin: 0 auto;
+}
+.bathome_ba2{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
 /*Formulaire*/
 input[type="email"],input[type="text"],textarea {
     border: none; 
@@ -185,6 +233,26 @@ form {
 .personne-contact h1{
     margin-top: 40px;
 }
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+#frequency {
+    padding-right: 30px; 
+    border: none; 
+    border-bottom: 1px solid #ccc; 
+    outline: none;
+    background-color: transparent;
+    width: 500px;
+}
+
+.select-wrapper .fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    right: 10px; 
+    transform: translateY(-50%);
+}
 .news-btn{
     display: flex;
     justify-content: center;
@@ -193,20 +261,107 @@ form {
     padding: 8px 12px;
     width: 109px;
     margin-left: 30px;
+    background-color: #525659; 
+    border: 1px solid #ccc;
+}
+.news-btn button:hover {
+    /* background-color: #ccc;  */
+    background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 60%, rgba(25, 88, 125, 0.4) 100%);
+    color: black; 
+    cursor: pointer; 
 }
 input[type="submit"] {
     margin-left: 145px;
-    padding: 10px 14px;
-    width: 190px;
+    padding: 20px 24px;
+    width: 270px;
     margin-top: 20px;
-    
-}
-footer{
-    height: 600px;
-    width: 100%;
-    background-color: #000;
-}
-footer p{
-    color: #fff;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, rgba(237, 222, 191, 0.4) 40%,  rgba(137, 0, 8, 1) 100%);
 }
 
+.citation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 59%;
+    padding: 70px;
+    margin: auto;
+    margin-top: 130px;
+}
+
+.citation p{
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 16px;
+    width: 40%;
+}
+.citation-un{
+    line-height: 30px;
+}
+.citation span{
+    font-size: 14px;
+    font-weight: lighter;
+
+}
+.icon_guillemets_1{
+    margin-top: -200px;
+    margin-right: 100px;
+}
+.icon_guillemets_2{
+    margin-top: 200px;
+    margin-left: 100px;
+}
+footer{
+    margin-top: 150px;
+}
+.footer-message, .footer-rs{
+    display: flex;
+    justify-content: center;
+}
+.footer-message p{
+    margin-left: 10px;
+   
+}
+.slideshow {
+    position: relative;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slider-nav button {
+    background-color: transparent;
+    border: 2px solid white; /* Bordure blanche */
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-nav button.active {
+    background-color: white; /* Fond blanc pour l'icône active */
+}
+
+.footer-rs{
+    margin-top: 30px;
+    margin-bottom: 170px;
+}
+
+.footer-img {
+    margin-right: 20px; 
+    gap: 32px;
+}
+.footer-img:hover {
+    filter: brightness(1.5) saturate(100%) hue-rotate(90deg);
+}
